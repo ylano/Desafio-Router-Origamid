@@ -9,7 +9,7 @@ import Contato from './pages/contato';
 
 function App() {
   return (
-    <div className=' max-w-screen-sm m-auto'>
+    <div className='max-w-screen-sm m-auto'>
       <BrowserRouter>
         <Header />
             <Routes>

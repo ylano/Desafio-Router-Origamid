@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-100 p-4 text-center">
+    <footer className=" bg-gray-900 text-gray-100 p-4 text-center">
       <p>
         Desenvolvido por{' '}
         <NavLink to="https://github.com/ylano" target="_blank" className="text-blue-400 hover:underline">
