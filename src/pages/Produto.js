@@ -31,18 +31,18 @@ const Produto = () => {
   }, [id]);
 
   if (loading) return <div className='loading'></div>;
-  if (error) return <p>{error}</p>;
+  if (error) return <p className='text-red-500'>{error}</p>;
   if (!produto) return <p>Produto não encontrado</p>;
 
   return (
-    <div className='h-screen'>
-      <section className='flex flex-col md:flex-row items-start m-8 gap-4 animeLeft'>
-        <Head 
-          title={`Ranek | ${produto.nome}`} 
-          description={`Ranek | Esse é um(a) ${produto.nome}`}
-        />
+    <div className='flex flex-col min-h-screen'>
+      <Head 
+        title={`Ranek | ${produto.nome}`} 
+        description={`Ranek | Esse é um(a) ${produto.nome}`}
+      />
 
-        <div className=' flex flex-col gap-4 w-full md:w-1/2'>
+      <section className='flex flex-col md:flex-row items-start m-8 gap-4 flex-grow'>
+        <div className='flex flex-col gap-4 w-full md:w-1/2'>
           {produto.fotos.map(foto => (
             <img 
               key={foto.src} 
@@ -53,7 +53,6 @@ const Produto = () => {
           ))}
         </div>
 
-        {/* Descrição */}
         <div className='flex-1'>
           <h1 className='text-xl font-bold mb-2'>{produto.nome}</h1>
           <span className='block max-w-16 rounded text-md font-sans text-green-950 bg-green-500 mb-4'>
@@ -62,6 +61,7 @@ const Produto = () => {
           <p className='max-w-full md:max-w-md'>{produto.descricao}</p>
         </div>
       </section>
+
     </div>
   );
 };

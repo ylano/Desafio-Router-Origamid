@@ -10,7 +10,7 @@ const Contato = () => {
       <div>
        <h2 className='font-semibold py-2 text-2xl'>Entre em contato.</h2>
         <ul className='justify-start'>
-          <li>francisco.ylano@certare.com.br</li>
+          <li>franciscoylano@gmail.com</li>
           <br/>
           <li>(99)-99999-9999</li>
           <br/>
